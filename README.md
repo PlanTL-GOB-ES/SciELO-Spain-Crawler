@@ -34,7 +34,7 @@ Example for publication with ID 'S0213-12852003000100001':
 
 This software has been compiled with Java SE 1.8 and it should work with recent versions. You can download Java from the following website: https://www.java.com/en/download
 
-IXA Pipes is needed as well. We used version 1.1.1 for this work, and latest versions should work as well. IXA pipes is licensed under the Apache License 2.0. You can download it from the following website: http://ixa2.si.ehu.es/ixa-pipes/
+IXA Pipes sentence splitter is needed as well. We used version 1.1.1 for this work, and latest versions should work as well. IXA pipes is licensed under the Apache License 2.0. You can download it from the following website: http://ixa2.si.ehu.es/ixa-pipes/
 
 Apache Commons IO is also necessary to execute the crawler. We used version 2.6 for this work. Apache Commons IO is licensed under the Apache License 2.0. You can download it from the following website: http://commons.apache.org/proper/commons-io/
 
@@ -51,7 +51,7 @@ The executable to generate the database.
 
 exec/Scielo-Spain-Crawler_lib/
 The modules needed to execute the crawler. Without this directory, the crawler will crash.
-Includes IXA Pipes, Apache Commons IO and Jsoup.
+Includes IXA Pipes (tokenization module only), Apache Commons IO and Jsoup.
 </pre>
 
 ## Usage
