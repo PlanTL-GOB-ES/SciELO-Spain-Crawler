@@ -89,13 +89,7 @@ public class GetRecordsFromSets {
 		for (int i = 0; i < sets.size(); i++)
 		{
 			String set = sets.get(i);
-			String setDir = DCdir + File.separator + set;
-			File theSetDir = new File(setDir);
-			if (!theSetDir.exists()) 
-			{
-				theSetDir.mkdir();
-			}
-			
+						
 			System.out.println("Extracting records from set " + set);
 			
 			getXML(set, lastDate, null);
@@ -200,11 +194,7 @@ public class GetRecordsFromSets {
         		Node headerNode = recordNode.getFirstChild();
             	String identifier = headerNode.getFirstChild().getTextContent();
             	
-        //    	String path = set + File.separator + identifier + ".xml";
-        //    	if (!writtenFiles.contains(path))
-         //   	{
-            		saveRecordDublinCore(recordNode, set, identifier);
-         //   	}
+            	saveRecordDublinCore(recordNode, set, identifier);
         	}       	
         }
         
@@ -247,6 +237,13 @@ public class GetRecordsFromSets {
 	
 	public void saveRecordDublinCore(Node node, String set, String identifier) throws ParserConfigurationException, TransformerException
 	{
+		String setDir = DCdir + File.separator + set;
+		File theSetDir = new File(setDir);
+		if (!theSetDir.exists()) 
+		{
+			theSetDir.mkdir();
+		}
+		
 		String fileName = DCdir + File.separator + set + File.separator + identifier + ".xml";
 		
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();

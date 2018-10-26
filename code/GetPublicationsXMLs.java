@@ -102,14 +102,16 @@ public class GetPublicationsXMLs {
 				
 				if (newRecords == null)
 				{
-					getRecordWGET(XMLdir, setID, recordID.replace(".xml", ""));
+					// getRecordWGET(XMLdir, setID, recordID.replace(".xml", ""));
+					getRecordWGET_Temporary(XMLdir, setID, recordID.replace(".xml", ""));
 				}
 				else
 				{
 					String newInfo = setID + File.separator + "oai:scielo:" + recordID;
 					if (newRecords.contains(newInfo))
 					{
-						getRecordWGET(XMLdir, setID, recordID.replace(".xml", ""));
+						// getRecordWGET (XMLdir, setID, recordID.replace(".xml", ""));
+						getRecordWGET_Temporary(XMLdir, setID, recordID.replace(".xml", ""));
 					}
 				}
 			}		
@@ -120,6 +122,12 @@ public class GetPublicationsXMLs {
 	
 	public void getRecordWGET(String XMLdir, String setID, String recordID)
 	{
+		/*
+		 * Currently there are some problems with the SciELO server and using wget in a normal way
+		 * is impossible. We are using the method below to download the records in XML right,
+		 * when we should have been using this one.
+		 * Once the problems are fixed, we will return to this method.
+		 */
  		String setDir = XMLdir + File.separator + setID;
 		File theDir = new File(setDir);
 		if (!theDir.exists()) 
@@ -129,7 +137,38 @@ public class GetPublicationsXMLs {
 		}
 		
 		// example: wget http://scielo.isciii.es/scieloOrg/php/articleXML.php?pid=S1130-01082004001000010 -O /home/aintxaur/Scielo-Corpus/scielo-isciii/records/1130-0108/S1130-01082004001000010.xml
-		String wget = "wget " + xmlURL + recordID + " -O " + XMLdir + File.separator + setID + File.separator + recordID + ".xml";
+		String wget = "wget -U \"Opera 11.0\" " + xmlURL + recordID + " -O " + XMLdir + File.separator + setID + File.separator + recordID + ".xml";
+		
+		Process p;
+		try
+		{
+			p = Runtime.getRuntime().exec(wget);
+			p.waitFor();
+			numRecords++;
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public void getRecordWGET_Temporary(String XMLdir, String setID, String recordID)
+	{
+		/*
+		 * Currently there are some problems with the SciELO server and using wget in a normal way
+		 * is impossible. We are using this method to download the records in XML right now.
+		 * Once the problems are fixed, we will return to the method above.
+		 */
+ 		String setDir = XMLdir + File.separator + setID;
+		File theDir = new File(setDir);
+		if (!theDir.exists()) 
+		{
+			theDir.mkdir();
+			System.out.println("Getting XML records for set " + setID);
+		}
+		
+		// example: wget http://scielo.isciii.es/scieloOrg/php/articleXML.php?pid=S1130-01082004001000010 -O /home/aintxaur/Scielo-Corpus/scielo-isciii/records/1130-0108/S1130-01082004001000010.xml
+		String wget = "wget -U \"Opera 11.0\" " + xmlURL + recordID + " -O " + XMLdir + File.separator + setID + File.separator + recordID + ".xml";
 		
 		Process p;
 		try

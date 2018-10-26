@@ -39,7 +39,7 @@ public class DCextender {
 	
 	public void setTitleSpanish(String titleSpanish)
 	{
-		if (titleSpanish != null)
+		if (titleSpanish!= null)
 		{
 			// remove original title (if exists)
 		/*	Element element = (Element) document.getElementsByTagName("dc:title").item(0);
@@ -49,7 +49,7 @@ public class DCextender {
 			}*/
 			
 			// create new node
-			Element newTitleSpanish = document.createElement("dc:title");
+			Element newTitleSpanish= document.createElement("dc:title");
 			newTitleSpanish.setAttribute("xml:lang", "es");
 			CDATASection cdata = document.createCDATASection(titleSpanish);
 			newTitleSpanish.appendChild(cdata);
@@ -85,7 +85,7 @@ public class DCextender {
 	
 	public void setAbstractSpanish(String abstractSpanish)
 	{
-		if (abstractSpanish != null)
+		if (abstractSpanish!= null)
 		{
 			// remove original abstract (if exists)
 		/*	Element element = (Element) document.getElementsByTagName("dc:description").item(0);
@@ -95,7 +95,7 @@ public class DCextender {
 			}		*/	
 			
 			// create new node
-			Element newAbstractSpanish = document.createElement("dc:description");
+			Element newAbstractSpanish= document.createElement("dc:description");
 			newAbstractSpanish.setAttribute("xml:lang", "es");		
 			CDATASection cdata = document.createCDATASection(abstractSpanish);
 			newAbstractSpanish.appendChild(cdata);

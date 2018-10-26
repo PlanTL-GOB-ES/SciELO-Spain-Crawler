@@ -54,7 +54,7 @@ public class XMLreader {
 
 	public String returnTitleSpanish()
 	{
-		String titleSpanish = null;
+		String titleCatalan = null;
 		
 		Node titleGroup = document.getElementsByTagName("title-group").item(0);
 		Element eNode = (Element) titleGroup;
@@ -66,11 +66,11 @@ public class XMLreader {
 			String language = title.getAttributes().getNamedItem("xml:lang").getNodeValue();
 			if (language.equals("es"))
 			{
-				titleSpanish = title.getTextContent();
+				titleCatalan = title.getTextContent();
 			}
 		}
 		
-		return titleSpanish;
+		return titleCatalan;
 	}
 	
 	public String returnTitleEnglish()
@@ -96,7 +96,7 @@ public class XMLreader {
 	
 	public String returnAbstractSpanish()
 	{
-		String abstractSpanish = null;
+		String abstractCatalan = null;
 		
 		NodeList abstracts = document.getElementsByTagName("abstract");
 		for (int i = 0; i < abstracts.getLength(); i++)
@@ -105,11 +105,11 @@ public class XMLreader {
 			String language = abs.getAttributes().getNamedItem("xml:lang").getNodeValue();
 			if (language.equals("es"))
 			{
-				abstractSpanish = abs.getTextContent();
+				abstractCatalan = abs.getTextContent();
 			}
 		}
 		
-		return abstractSpanish;
+		return abstractCatalan;
 	}
 	
 	public String returnAbstractEnglish()
