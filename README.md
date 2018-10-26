@@ -70,25 +70,36 @@ If you execute the crawler in a directory previously created, the crawler will o
 The crawler creates 4 different directories in the output directory, and a text file:
 <pre>
 last_date.txt
-stores the date of the last time the crawled was executed, this file is used to control the download of new documents every time the crawler is executed.
+stores the date of the last time the crawled was executed,
+this file is used to control the download of new documents every time the crawler is executed.
 
 dublin_core_records/
-This is the first folder created by the crawler. Contains all publications' metadata in Dublin Core (DC) format. You can find information about the publication's title, abstract, authors,... Each subfolder is a journal's ID, you can find the publications of the journal inside the folder. This folder contains the titles and abstracts in Spanish only
+This is the first folder created by the crawler. Contains all publications' metadata in Dublin Core (DC) format.
+You can find information about the publication's title, abstract, authors,...
+Each subfolder is a journal's ID, you can find the publications of the journal inside the folder.
+This folder contains the titles and abstracts in Spanish only.
 
 records/
-this is the second folder created. Contains the publication's info in XML format, very similar to the metadata. This file includes the full text in HTML format, titles and abstract in Spanish and English (if available),...
+this is the second folder created. Contains the publication's info in XML format,
+very similar to the metadata. This file includes the full text in HTML format,
+titles and abstract in Spanish and English (if available), and so on.
 
 dublin_core_extended/
-this is the third folder created by the crawler. You can find the same files of the "dublin_core_records" folder, but this time titles and abstracts can be found in both Spanish and English.
+this is the third folder created by the crawler. You can find the same files
+of the "dublin_core_records" folder, but this time titles and abstracts can be found in both Spanish and English.
 
 full_texts/clean_raw_text/
-this is the fourth folder created by the crawler. In this folder we can find the full text of the article extracted from the XML file, with the encoding fixed, in complete raw text. Each line is a paragraph.
+this is the fourth folder created by the crawler. In this folder we can find the full text
+of the article extracted from the XML file, with the encoding fixed, in complete raw text. Each line is a paragraph.
 
 full_texts/clean_xml_text/
-this is the fifth folder created byt the crawler. This time, the full text is organized in an XML file. Each XML contains the journal's ID, the article's ID, and the full text splitted in paragraphs and sentences. We used IXA pipes [1] to split the sentences.
+this is the fifth folder created byt the crawler. This time, the full text is organized in an XML file.
+Each XML contains the journal's ID, the article's ID, and the full text splitted in paragraphs and sentences.
+We used IXA pipes [1] to split the sentences.
 
 dublin_core_tsv/
-this is the last folder created by the crawler. Here we can find all metadata of the "dublin_core_extended" folder in one single file in tabular format (TSV).
+this is the last folder created by the crawler. Here we can find all metadata of the "dublin_core_extended"
+folder in one single file in tabular format (TSV).
 </pre>
 
 ## Example
