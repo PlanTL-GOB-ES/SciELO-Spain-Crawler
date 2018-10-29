@@ -58,7 +58,7 @@ The modules needed to execute the crawler. Without this directory, the crawler w
 
 ## Usage
 
-To execute the crawler, you just need the "Scielo-Spain-Crawler.jar" file. Simply type the following command:
+To execute the crawler, use the following command:
 
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ID]</pre>
 
