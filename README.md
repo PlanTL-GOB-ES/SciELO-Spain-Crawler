@@ -11,7 +11,7 @@ Mundial de la Salud (Pan American Health Organization/World Health Organization,
 Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/), and it is been developed by the Biblioteca 
 Nacional de Ciencias de la Salud (National Library of Health Sciences, BNCS) (www.isciii.es/bncs).
 The main objective of the SciELO project is to develop a common methodology for the preparation, storage, dissemination and 
-evaluation of Spanish scientific literature in electronic format. 
+evaluation of scientific literature in electronic format. 
 
 
 The SciELO crawler downloads all the publications written in Spanish from the Spanish SciELO server. This server is organized 
@@ -60,9 +60,9 @@ Pipes (the tokenization module only), Apache Commons IO and Jsoup.
 
 To execute the crawler, use the following command:
 
-<pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ID]</pre>
+<pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ISSN]</pre>
 
-where, OUTPUT_DIRECTORY is the directory to place the downloaded corpus and JOURNAL_ID is the journal's ID. This parameter is 
+where, OUTPUT_DIRECTORY is the directory to place the downloaded corpus and JOURNAL_ISSN is the journal's offical ISSN serial number. This parameter is 
 optional and it should be used to download only an specific journal.
 
 Note that the file CC-licenses.txt must be placed in the OUTPUT_DIRECTORY, otherwise the crawler will crash.
