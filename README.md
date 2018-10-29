@@ -7,23 +7,20 @@ covering a collection of Spanish health scientific journals that are selected fo
 
 The library is an integral part of a project being developed by BIREME (the Latin American and Caribbean Center on 
 Health Sciences Information), in partnership with FAPESP (Fundação de Amparo à Pesquisa do Estado de São Paulo). 
-In Spain, the SciELO project is the result of the collaboration between OPS/OMS and Carlos III Health Institute (ISCIII) (http://www.isciii.es/) and it is been developed by the National Library of Health Sciences (www.isciii.es/bncs).
+In Spain, the SciELO project is the result of the collaboration between Organización Panamericana de Salud/Organización 
+Mundial de la Salud (Pan American Health Organization/World Health Organization, OPS/OMS) and the Instituto de Salud 
+Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/) and it is been developed by the Biblioteca 
+Nacional de Ciencias de la Salud (National Library of Health Sciences, BNCS) (www.isciii.es/bncs).
 
 The main aim of the SciELO project is to develop a common methodology for the preparation, storage, dissemination and 
 evaluation of Spanish scientific literature in electronic format. 
 
 The SciELO crawler downloads all publications written in Spanish from the Spanish SciELO server, which is organized 
-using OAI-PMH services, providing access to all metadata of each publication. This protocol gives access to the full 
-text of each publication in XML. The crawler also extract the complete text, fixes the encoding, and creates a new 
-XML file with all sentences splitted.
-
-The OAI-PMH server is maintained by the Carlos III Health Institute (Instituto de Salud Carlos III) in Madrid, Spain. A number of new publications are added every week.
+using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/). This services provides access to all 
+metadata of each publication, which includes a link to the full text in XML. The crawler also fixes the encoding and 
+creates a new XML file with all sentences splitted.
 
 This crawler only downloads those journals with explicit Creative Commons licenses.
-
-### SciELO Spain OAI-PMH server
-
-Server URL: http://scielo.isciii.es/oai/
 
 Example for publication with ID 'S0213-12852003000100001':
 - Dublin Core metadata: http://scielo.isciii.es/oai/scielo-oai.php?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:scielo:S0213-12852003000100001
@@ -35,7 +32,9 @@ Example for publication with ID 'S0213-12852003000100001':
 
 This software has been compiled with Java SE 1.8 and it should work with recent versions. You can download Java from the following website: https://www.java.com/en/download
 
-IXA Pipes sentence splitter is needed as well. We used version 1.1.1 for this work and latest versions should work as well. IXA pipes is licensed under the Apache License 2.0. You can download it from the following website: http://ixa2.si.ehu.es/ixa-pipes/
+IXA Pipes tokenization is needed as well. We used version 1.1.1 for this work and latest versions should work as well. 
+IXA pipes is licensed under the Apache License 2.0. You can download it from the following website: 
+http://ixa2.si.ehu.es/ixa-pipes/
 
 Apache Commons IO is also necessary to execute the crawler. We used version 2.6 for this work. Apache Commons IO is licensed under the Apache License 2.0. You can download it from the following website: http://commons.apache.org/proper/commons-io/
 
@@ -63,7 +62,7 @@ To execute the crawler, use the following command:
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ID]</pre>
 
 OUTPUT_DIRECTORY is the directory to place the downloaded corpus. JOURNAL_ID is the journal's ID. This parameter is 
-optional the optional and it should be used to download only an specific journal.
+optional and it should be used to download only an specific journal.
 
 Note that the file CC-licenses.txt must be in the OUTPUT_DIRECTORY, otherwise the crawler will crash.
 
@@ -81,31 +80,29 @@ documents every time the crawler is executed.
 
 dublin_core_records/
 The first folder created by the crawler. It contains all publications' metadata in Dublin Core format.
-You can find information about the publication's title, abstract, authors,...
+You can find information about the publication's title, abstract, authors...
 Each subfolder is a journal's ID, you can find the publications of the journal inside the folder.
 This folder contains the titles and abstracts in Spanish only.
 
 records/
-The second folder created. It contains the publication's info in XML format, very similar to the metadata. 
-This file includes the full text in HTML format,titles and abstract in Spanish and English (if available), 
-and so on.
+The second folder created by the crawler. It contains the publications' information in XML format, very similar to 
+the metadata. This file includes the full text in HTML format, titles and abstract in Spanish and English 
+(if available), and so on.
 
 dublin_core_extended/
-this is the third folder created by the crawler. You can find the same files
-of the "dublin_core_records" folder, but this time titles and abstracts can be found in both Spanish and English.
+The third folder created by the crawler. It contains the same files of the "dublin_core_records" folder, but the titles and abstracts in both Spanish and English.
 
 full_texts/clean_raw_text/
-this is the fourth folder created by the crawler. In this folder we can find the full text
-of the article extracted from the XML file, with the encoding fixed, in complete raw text. Each line is a paragraph.
+The fourth folder created by the crawler. It contains the full text of the article extracted from the XML file, with the 
+encoding fixed, in complete raw text. Each line is a paragraph.
 
 full_texts/clean_xml_text/
-this is the fifth folder created byt the crawler. This time, the full text is organized in an XML file.
-Each XML contains the journal's ID, the article's ID, and the full text splitted in paragraphs and sentences.
-We used IXA pipes [1] to split the sentences.
+The fifth folder created by the crawler. Here the full text is organized in an XML file. Each XML contains the journal's ID, 
+the article's ID, and the full text splitted in paragraphs and sentences. We used IXA pipes to split the sentences.
 
 dublin_core_tsv/
-this is the last folder created by the crawler. Here we can find all metadata of the "dublin_core_extended"
-folder in one single file in tabular format (TSV).
+The last folder created by the crawler. It includes all metadata of the "dublin_core_extended" folder in one single file 
+in tabular format (TSV).
 </pre>
 
 
