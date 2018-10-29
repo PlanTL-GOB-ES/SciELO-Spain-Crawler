@@ -83,8 +83,8 @@ all its publications. This folder contains the titles and abstracts in Spanish o
 
 records/
 The second folder created by the crawler. It contains the publications' information in XML format, very 
-similar to the metadata. This file includes the full text in HTML format, its title and its abstract in Spanish 
-and English (if available)...
+similar to the metadata. This file includes the full text in HTML format, its title and its abstract in 
+Spanish and English (if available)...
 
 dublin_core_extended/
 The third folder created by the crawler. It contains the same files of the "dublin_core_records" folder, 
@@ -95,13 +95,13 @@ The fourth folder created by the crawler. It contains the full text of the artic
 file, with the encoding fixed, in complete raw text. Each line is a paragraph.
 
 full_texts/clean_xml_text/
-The fifth folder created by the crawler. Here the full text is organized in an XML file. Each XML contains the 
-journal's ID, the article's ID and the full text splitted in paragraphs and sentences. We used IXA pipes to split 
-the sentences.
+The fifth folder created by the crawler. Here the full text is organized in an XML file. Each XML contains 
+the journal's ID, the article's ID and the full text splitted in paragraphs and sentences. We used IXA pipes 
+to split the sentences.
 
 dublin_core_tsv/
-The last folder created by the crawler. It includes all metadata of the "dublin_core_extended" folder in one 
-single file in tabular format (TSV).
+The last folder created by the crawler. It includes all metadata of the "dublin_core_extended" folder in 
+one single file in tabular format (TSV).
 </pre>
 
 
