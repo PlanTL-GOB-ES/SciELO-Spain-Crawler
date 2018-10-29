@@ -70,7 +70,7 @@ Note that the file CC-licenses.txt must be placed in the OUTPUT_DIRECTORY, other
 If you execute the crawler in a previously created directory, the crawler will only download the added documents, 
 instead of the full collection again.
 
-The crawler creates 4 different directories in the output directory, and a text file:
+The crawler creates a text file and five different directories in the output directory:
 <pre>
 last_date.txt
 Stores the date of the last time the crawled was executed. This file is used to control the download of new 
