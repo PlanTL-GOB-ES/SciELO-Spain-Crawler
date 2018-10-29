@@ -70,8 +70,6 @@ If you execute the crawler in a previously created directory, the crawler will o
 instead of the full collection again.
 
 
-### Crawler output guide
-
 The crawler creates 4 different directories in the output directory, and a text file:
 <pre>
 last_date.txt
