@@ -14,8 +14,8 @@ The main objective of the SciELO project is to develop a common methodology for 
 evaluation of Spanish scientific literature in electronic format. 
 
 
-The SciELO crawler downloads all publications written in Spanish from the Spanish SciELO server, which is organized 
-using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/). This services provides access to all 
+The SciELO crawler downloads all the publications written in Spanish from the Spanish SciELO server. This server is organized 
+using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/), and it provides access to all the 
 metadata of each publication, which includes a link to the full text in XML. The crawler also fixes the encoding and 
 creates a new XML file with all sentences splitted.
 
