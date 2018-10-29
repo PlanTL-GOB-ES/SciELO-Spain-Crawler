@@ -4,14 +4,12 @@
 
 The Scientific Electronic Library Online – SciELO Spain (http://scielo.isciii.es) is an electronic virtual library 
 covering a collection of Spanish health scientific journals that are selected following preestablished quality criteria.
-
 The library is an integral part of a project being developed by BIREME (the Latin American and Caribbean Center on 
 Health Sciences Information), in partnership with FAPESP (Fundação de Amparo à Pesquisa do Estado de São Paulo). 
 In Spain, the SciELO project is the result of the collaboration between the Organización Panamericana de Salud/Organización 
 Mundial de la Salud (Pan American Health Organization/World Health Organization, OPS/OMS) and the Instituto de Salud 
 Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/) and it is been developed by the Biblioteca 
 Nacional de Ciencias de la Salud (National Library of Health Sciences, BNCS) (www.isciii.es/bncs).
-
 The main objective of the SciELO project is to develop a common methodology for the preparation, storage, dissemination and 
 evaluation of Spanish scientific literature in electronic format. 
 
