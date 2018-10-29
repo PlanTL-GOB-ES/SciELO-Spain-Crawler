@@ -12,8 +12,9 @@ Mundial de la Salud (Pan American Health Organization/World Health Organization,
 Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/) and it is been developed by the Biblioteca 
 Nacional de Ciencias de la Salud (National Library of Health Sciences, BNCS) (www.isciii.es/bncs).
 
-The main aim of the SciELO project is to develop a common methodology for the preparation, storage, dissemination and 
+The main objective of the SciELO project is to develop a common methodology for the preparation, storage, dissemination and 
 evaluation of Spanish scientific literature in electronic format. 
+
 
 The SciELO crawler downloads all publications written in Spanish from the Spanish SciELO server, which is organized 
 using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/). This services provides access to all 
