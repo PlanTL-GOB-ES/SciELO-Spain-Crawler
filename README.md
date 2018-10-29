@@ -19,24 +19,27 @@ using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/),
 metadata of each publication, which includes a link to the full text in XML. The crawler also fixes the encoding and 
 creates a new XML file with all sentences splitted.
 
-Example for publication with ID 'S0213-12852003000100001':
-- Dublin Core metadata: http://scielo.isciii.es/oai/scielo-oai.php?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:scielo:S0213-12852003000100001
-- Publication website: http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S0213-12852003000100001
-- Publication in XML format including full text: http://scielo.isciii.es/scieloOrg/php/articleXML.php?pid=S0213-12852003000100001&lang=es 
+Example: 
+
+Publication with ID 'S0213-12852003000100001':
+    - Publication website: http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S0213-12852003000100001
+    - Dublin Core metadata: http://scielo.isciii.es/oai/scielo-oai.php?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:scielo:S0213-12852003000100001
+    - Publication in XML format including full text: http://scielo.isciii.es/scieloOrg/php/articleXML.php?pid=S0213-12852003000100001&lang=es 
 
 This crawler only downloads those journals with explicit Creative Commons licenses.
+
 
 ## Prerequisites
 
 This software has been compiled with Java SE 1.8 and it should work with recent versions. You can download Java from the following website: https://www.java.com/en/download
 
-IXA Pipes tokenization is needed as well. We used version 1.1.1 for this work and latest versions should work as well. 
+The IXA Pipes tokenization module is needed as well. We used version 1.1.1 for this work and latest versions should work as well. 
 IXA pipes is licensed under the Apache License 2.0. You can download it from the following website: 
 http://ixa2.si.ehu.es/ixa-pipes/
 
 Apache Commons IO is also necessary to execute the crawler. We used version 2.6 for this work. Apache Commons IO is licensed under the Apache License 2.0. You can download it from the following website: http://commons.apache.org/proper/commons-io/
 
-Finally, the Jsoup library is also required. Version 1.10.3 has been used here. Jsoup is distributed under the MIT license. The library is available in this website: https://jsoup.org/
+Finally, the Jsoup library is also needed. Version 1.10.3 has been used here. Jsoup is distributed under the MIT license. The library is available in this website: https://jsoup.org/
 
 ## Directory structure
 
@@ -59,14 +62,13 @@ To execute the crawler, use the following command:
 
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ID]</pre>
 
-OUTPUT_DIRECTORY is the directory to place the downloaded corpus. JOURNAL_ID is the journal's ID. This parameter is 
+where, OUTPUT_DIRECTORY is the directory to place the downloaded corpus and JOURNAL_ID is the journal's ID. This parameter is 
 optional and it should be used to download only an specific journal.
 
-Note that the file CC-licenses.txt must be in the OUTPUT_DIRECTORY, otherwise the crawler will crash.
+Note that the file CC-licenses.txt must be placed in the OUTPUT_DIRECTORY, otherwise the crawler will crash.
 
 If you execute the crawler in a previously created directory, the crawler will only download the added documents, 
 instead of the full collection again.
-
 
 The crawler creates 4 different directories in the output directory, and a text file:
 <pre>
@@ -75,18 +77,17 @@ Stores the date of the last time the crawled was executed. This file is used to 
 documents every time the crawler is executed.
 
 dublin_core_records/
-The first folder created by the crawler. It contains all publications' metadata in Dublin Core format.
-You can find information about the publication's title, abstract, authors...
-Each subfolder is a journal's ID, you can find the publications of the journal inside the folder.
+The first folder created by the crawler. It contains all publications' metadata in Dublin Core format (publication's 
+title, abstract, authors...). Each subfolder is named after a journal's ID and includes all its publications.  
 This folder contains the titles and abstracts in Spanish only.
 
 records/
 The second folder created by the crawler. It contains the publications' information in XML format, very similar to 
-the metadata. This file includes the full text in HTML format, titles and abstract in Spanish and English 
-(if available), and so on.
+the metadata. This file includes the full text in HTML format, its title and its abstract in Spanish and English 
+(if available)...
 
 dublin_core_extended/
-The third folder created by the crawler. It contains the same files of the "dublin_core_records" folder, but the titles and abstracts in both Spanish and English.
+The third folder created by the crawler. It contains the same files of the "dublin_core_records" folder, but the titles and abstracts are in both Spanish and English.
 
 full_texts/clean_raw_text/
 The fourth folder created by the crawler. It contains the full text of the article extracted from the XML file, with the 
@@ -94,7 +95,7 @@ encoding fixed, in complete raw text. Each line is a paragraph.
 
 full_texts/clean_xml_text/
 The fifth folder created by the crawler. Here the full text is organized in an XML file. Each XML contains the journal's ID, 
-the article's ID, and the full text splitted in paragraphs and sentences. We used IXA pipes to split the sentences.
+the article's ID and the full text splitted in paragraphs and sentences. We used IXA pipes to split the sentences.
 
 dublin_core_tsv/
 The last folder created by the crawler. It includes all metadata of the "dublin_core_extended" folder in one single file 
