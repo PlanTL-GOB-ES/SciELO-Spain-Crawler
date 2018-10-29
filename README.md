@@ -7,7 +7,7 @@ covering a collection of Spanish health scientific journals that are selected fo
 
 The library is an integral part of a project being developed by BIREME (the Latin American and Caribbean Center on 
 Health Sciences Information), in partnership with FAPESP (Fundação de Amparo à Pesquisa do Estado de São Paulo). 
-In Spain, the SciELO project is the result of the collaboration between Organización Panamericana de Salud/Organización 
+In Spain, the SciELO project is the result of the collaboration between the Organización Panamericana de Salud/Organización 
 Mundial de la Salud (Pan American Health Organization/World Health Organization, OPS/OMS) and the Instituto de Salud 
 Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/) and it is been developed by the Biblioteca 
 Nacional de Ciencias de la Salud (National Library of Health Sciences, BNCS) (www.isciii.es/bncs).
@@ -50,8 +50,8 @@ exec/
 The executable to generate the database.
 
 exec/Scielo-Spain-Crawler_lib/
-The modules needed to execute the crawler. Without this directory, the crawler will crash. It includes IXA Pipes 
-(the tokenization module only), Apache Commons IO and Jsoup.
+The modules needed to execute the crawler. Without this directory, the crawler will crash. It includes IXA 
+Pipes (the tokenization module only), Apache Commons IO and Jsoup.
 </pre>
 
 
