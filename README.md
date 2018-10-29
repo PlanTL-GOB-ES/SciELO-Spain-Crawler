@@ -22,9 +22,9 @@ creates a new XML file with all sentences splitted.
 Example: 
 
 Publication with ID 'S0213-12852003000100001':
-    - Publication website: http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S0213-12852003000100001
-    - Dublin Core metadata: http://scielo.isciii.es/oai/scielo-oai.php?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:scielo:S0213-12852003000100001
-    - Publication in XML format including full text: http://scielo.isciii.es/scieloOrg/php/articleXML.php?pid=S0213-12852003000100001&lang=es 
+- Publication website: http://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S0213-12852003000100001
+- Dublin Core metadata: http://scielo.isciii.es/oai/scielo-oai.php?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:scielo:S0213-12852003000100001
+- Publication in XML format including full text: http://scielo.isciii.es/scieloOrg/php/articleXML.php?pid=S0213-12852003000100001&lang=es 
 
 This crawler only downloads those journals with explicit Creative Commons licenses.
 
