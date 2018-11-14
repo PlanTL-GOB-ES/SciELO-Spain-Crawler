@@ -8,14 +8,13 @@ The library is an integral part of a project being developed by BIREME (the Lati
 Health Sciences Information) in partnership with FAPESP (Fundação de Amparo à Pesquisa do Estado de São Paulo). 
 In Spain, the SciELO project is the result of the collaboration between the Organización Panamericana de Salud/Organización 
 Mundial de la Salud (Pan American Health Organization/World Health Organization, OPS/OMS) and the Instituto de Salud 
-Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/), and it is been developed by the Biblioteca 
+Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/) and it is been developed by the Biblioteca 
 Nacional de Ciencias de la Salud (National Library of Health Sciences, BNCS) (www.isciii.es/bncs).
 The main objective of the SciELO project is to develop a common methodology for the preparation, storage, dissemination and 
 evaluation of scientific literature in electronic format. 
 
-
 The SciELO crawler downloads all the publications written in Spanish from the Spanish SciELO server. This server is organized 
-using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/), and it provides access to all the 
+using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/) and it provides access to all the 
 metadata of each publication, which includes a link to the full text in XML. The crawler also fixes the encoding and 
 creates a new XML file with all sentences splitted.
 
@@ -41,6 +40,7 @@ Apache Commons IO is also necessary to execute the crawler. We used version 2.6 
 
 Finally, the Jsoup library is also needed. Version 1.10.3 has been used here. Jsoup is distributed under the MIT license. The library is available in this website: https://jsoup.org/
 
+
 ## Directory structure
 
 <pre>
@@ -58,7 +58,7 @@ Pipes (the tokenization module only), Apache Commons IO and Jsoup.
 
 ## Usage
 
-To execute the crawler, use the following command:
+To execute the crawler use the following command:
 
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ISSN]</pre>
 
@@ -84,7 +84,7 @@ all its publications. This folder contains the titles and abstracts in Spanish o
 records/
 The second folder created by the crawler. It contains the publications' information in XML format, very 
 similar to the metadata. This file includes the full text in HTML format, its title and its abstract in 
-Spanish and English (if available)...
+Spanish and English (if available).
 
 dublin_core_extended/
 The third folder created by the crawler. It contains the same files of the "dublin_core_records" folder, 
