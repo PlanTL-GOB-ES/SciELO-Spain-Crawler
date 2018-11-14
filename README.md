@@ -105,7 +105,7 @@ one single file in tabular format (TSV).
 </pre>
 
 
-## Example
+## Examples
 
 <pre>
 java -jar Scielo-Spain-Crawler.jar ./SciELO-Spanish-Articles
@@ -115,7 +115,7 @@ java -jar Scielo-Spain-Crawler.jar ./SciELO-Spanish-Articles 1578-2549
 
 ## Contact
 
-PlanTL.Sanidad@bsc.es
+PlanTL.Sanidad@gmail.com
 
 ## License
 
