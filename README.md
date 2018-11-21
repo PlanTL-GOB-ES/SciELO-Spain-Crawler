@@ -28,6 +28,11 @@ Publication with ID 'S0213-12852003000100001':
 This crawler only downloads those journals with explicit Creative Commons licenses.
 
 
+## Digital Object Identifier (DOI)
+
+https://doi.org/10.5281/zenodo.1493411
+
+
 ## Prerequisites
 
 This software has been compiled with Java SE 1.8 and it should work with recent versions. You can download Java from the following website: https://www.java.com/en/download
