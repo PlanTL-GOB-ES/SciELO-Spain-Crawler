@@ -115,7 +115,7 @@ java -jar Scielo-Spain-Crawler.jar ./SciELO-Spanish-Articles 1578-2549
 
 ## Contact
 
-PlanTL.Sanidad@gmail.com
+ander.intxaurrondo@bsc.es
 
 ## License
 
