@@ -1,5 +1,10 @@
 # SciELO Spain Crawler
 
+## Digital Object Identifier (DOI)
+
+https://doi.org/10.5281/zenodo.1493411
+
+
 ## Introduction
 
 The Scientific Electronic Library Online – SciELO Spain (http://scielo.isciii.es) is an electronic virtual library 
@@ -26,11 +31,6 @@ Publication with ID 'S0213-12852003000100001':
 - Publication in XML format including full text: http://scielo.isciii.es/scieloOrg/php/articleXML.php?pid=S0213-12852003000100001&lang=es 
 
 This crawler only downloads those journals with explicit Creative Commons licenses.
-
-
-## Digital Object Identifier (DOI)
-
-https://doi.org/10.5281/zenodo.1493411
 
 
 ## Prerequisites
@@ -120,7 +120,8 @@ java -jar Scielo-Spain-Crawler.jar ./SciELO-Spanish-Articles 1578-2549
 
 ## Contact
 
-ander.intxaurrondo@bsc.es
+Ander Intxaurrondo (ander.intxaurrondo@bsc.es)
+
 
 ## License
 
