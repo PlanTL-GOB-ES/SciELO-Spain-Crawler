@@ -19,7 +19,7 @@ The main objective of the SciELO project is to develop a common methodology for 
 evaluation of scientific literature in electronic format. 
 
 The SciELO crawler downloads all the publications written in Spanish from the Spanish SciELO server. This server is organized 
-using OAI-PMH services, maintained by the ISCIII (http://scielo.isciii.es/oai/) and it provides access to all the 
+using OAI-PMH services, maintained by ISCIII (http://scielo.isciii.es/oai/), and it provides access to all the 
 metadata of each publication, which includes a link to the full text in XML. The crawler also fixes the encoding and 
 creates a new XML file with all sentences splitted.
 
@@ -63,7 +63,7 @@ Pipes (the tokenization module only), Apache Commons IO and Jsoup.
 
 ## Usage
 
-To execute the crawler use the following command:
+To execute the crawler from the `exec`directory, use the following command:
 
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ISSN]</pre>
 
@@ -74,6 +74,9 @@ Note that the file CC-licenses.txt must be placed in the OUTPUT_DIRECTORY, other
 
 If you execute the crawler in a previously created directory, the crawler will only download the added documents, 
 instead of the full collection again.
+
+
+### Output
 
 The crawler creates a text file and five different directories in the output directory:
 <pre>
