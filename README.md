@@ -67,8 +67,9 @@ To execute the crawler from the `exec`directory, use the following command:
 
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ISSN]</pre>
 
-where, OUTPUT_DIRECTORY is the directory to place the downloaded corpus and JOURNAL_ISSN is the journal's offical 
-ISSN serial number. This parameter is optional and it should be used to download only an specific journal.
+where, OUTPUT_DIRECTORY is the directory to place the downloaded corpus and you should specify the absolute path
+where it is placed, and JOURNAL_ISSN is the journal's offical ISSN serial number. This parameter is optional and it 
+should be used to download only an specific journal.
 
 Note that the file CC-licenses.txt must be placed in the OUTPUT_DIRECTORY, otherwise the crawler will crash.
 
@@ -116,8 +117,8 @@ one single file in tabular format (TSV).
 ## Examples
 
 <pre>
-java -jar Scielo-Spain-Crawler.jar ./SciELO-Spanish-Articles
-java -jar Scielo-Spain-Crawler.jar ./SciELO-Spanish-Articles 1578-2549
+java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exec/SciELO-Spanish-Articles
+java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exec/SciELO-Spanish-Articles 1578-2549
 </pre>
 
 
