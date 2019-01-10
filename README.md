@@ -77,12 +77,22 @@ If you execute the crawler in a previously created directory, the crawler will o
 instead of the full collection again.
 
 
+## Examples
+
+Let's assume an OUTPUT_DIRECTORY `SciELO-Spanish-Articles` in the `exec`directory. 
+
+<pre>
+java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exec/SciELO-Spanish-Articles
+java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exec/SciELO-Spanish-Articles 1578-2549
+</pre>
+
+
 ### Output
 
 The crawler creates a text file and five different directories in the output directory:
 <pre>
 last_date.txt
-Stores the date of the last time the crawled was executed. This file is used to control the download of new 
+Stores the date of the last time the crawler was executed. This file is used to control the download of new 
 documents every time the crawler is executed.
 
 dublin_core_records/
@@ -111,14 +121,6 @@ to split the sentences.
 dublin_core_tsv/
 The last folder created by the crawler. It includes all metadata of the "dublin_core_extended" folder in 
 one single file in tabular format (TSV).
-</pre>
-
-
-## Examples
-
-<pre>
-java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exec/SciELO-Spanish-Articles
-java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exec/SciELO-Spanish-Articles 1578-2549
 </pre>
 
 
