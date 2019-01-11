@@ -13,15 +13,15 @@ The library is an integral part of a project being developed by BIREME (the Lati
 Health Sciences Information) in partnership with FAPESP (Fundação de Amparo à Pesquisa do Estado de São Paulo). 
 In Spain, the SciELO project is the result of the collaboration between the Organización Panamericana de Salud/Organización 
 Mundial de la Salud (Pan American Health Organization/World Health Organization, OPS/OMS) and the Instituto de Salud 
-Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/) and it is been developed by the Biblioteca 
+Carlos III (Carlos III Health Institute, ISCIII) (http://www.isciii.es/), and it is been developed by the Biblioteca 
 Nacional de Ciencias de la Salud (National Library of Health Sciences, BNCS) (www.isciii.es/bncs).
 The main objective of the SciELO project is to develop a common methodology for the preparation, storage, dissemination and 
 evaluation of scientific literature in electronic format. 
 
 The SciELO crawler downloads all the publications written in Spanish from the Spanish SciELO server. This server is organized 
-using OAI-PMH services, maintained by ISCIII (http://scielo.isciii.es/oai/), and it provides access to all the 
+using the OAI-PMH services maintained by ISCIII (http://scielo.isciii.es/oai/), and it provides access to all the 
 metadata of each publication, which includes a link to the full text in XML. The crawler also fixes the encoding and 
-creates a new XML file with all sentences splitted.
+creates a new XML file with all the sentences being splitted.
 
 Example: 
 
