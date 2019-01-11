@@ -67,8 +67,8 @@ To execute the crawler from the `exec` directory, use the following command:
 
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ISSN]</pre>
 
-where, OUTPUT_DIRECTORY is the directory to place the downloaded corpus and you should specify the absolute path
-where it is placed, and JOURNAL_ISSN is the journal's offical ISSN serial number. This parameter is optional and it 
+where, OUTPUT_DIRECTORY is the directory to place the downloaded corpus (you should specify the absolute path where 
+it is placed), and JOURNAL_ISSN is the journal's offical ISSN serial number. This parameter is optional and it 
 should be used to download only an specific journal.
 
 Note that the file CC-licenses.txt must be placed in the OUTPUT_DIRECTORY, otherwise the crawler will crash.
@@ -115,7 +115,7 @@ file, with the encoding fixed, in complete raw text. Each line is a paragraph.
 
 full_texts/clean_xml_text/
 The fifth folder created by the crawler. Here the full text is organized in an XML file. Each XML contains 
-the journal's ID, the article's ID and the full text splitted in paragraphs and sentences. We used IXA pipes 
+the journal's ID, the article's ID and the full text splitted in paragraphs and sentences. We used IXA Pipes 
 to split the sentences.
 
 dublin_core_tsv/
