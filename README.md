@@ -38,7 +38,7 @@ This crawler only downloads those journals with explicit Creative Commons licens
 This software has been compiled with Java SE 1.8 and it should work with recent versions. You can download Java from the following website: https://www.java.com/en/download
 
 The IXA Pipes tokenization module is needed as well. We used version 1.1.1 for this work and latest versions should work as well. 
-IXA pipes is licensed under the Apache License 2.0. You can download it from the following website: 
+IXA Pipes is licensed under the Apache License 2.0. You can download it from the following website: 
 http://ixa2.si.ehu.es/ixa-pipes/
 
 Apache Commons IO is also necessary to execute the crawler. We used version 2.6 for this work. Apache Commons IO is licensed under the Apache License 2.0. You can download it from the following website: http://commons.apache.org/proper/commons-io/
@@ -63,7 +63,7 @@ Pipes (the tokenization module only), Apache Commons IO and Jsoup.
 
 ## Usage
 
-To execute the crawler from the `exec`directory, use the following command:
+To execute the crawler from the `exec` directory, use the following command:
 
 <pre>java -jar Scielo-Spain-Crawler.jar OUTPUT_DIRECTORY [JOURNAL_ISSN]</pre>
 
@@ -79,7 +79,7 @@ instead of the full collection again.
 
 ## Examples
 
-Let's assume an OUTPUT_DIRECTORY `SciELO-Spanish-Articles` in the `exec`directory. 
+Let's assume an OUTPUT_DIRECTORY `SciELO-Spanish-Articles` in the `exec` directory. 
 
 <pre>
 java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exec/SciELO-Spanish-Articles
