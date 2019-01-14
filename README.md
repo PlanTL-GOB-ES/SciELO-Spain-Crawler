@@ -87,7 +87,7 @@ java -jar Scielo-Spain-Crawler.jar user/path_to_Crawler/SciELO-Spain-Crawler/exe
 </pre>
 
 
-### Output
+## Output
 
 The crawler creates a text file and five different directories in the output directory:
 <pre>
