@@ -1,5 +1,10 @@
 # SciELO Spain Crawler
 
+##  Digital Object Identifier (DOI)
+
+https://doi.org/10.5281/zenodo.2541681
+
+
 ## Introduction
 
 The Scientific Electronic Library Online – SciELO Spain (http://scielo.isciii.es) is an electronic virtual library 
